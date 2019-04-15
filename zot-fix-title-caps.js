@@ -10,12 +10,11 @@
 // Get items currently selected in Zotero window
 var zp = Zotero.getActiveZoteroPane();
 var items = zp.getSelectedItems();
+var titleFieldID = Zotero.ItemFields.getID('title');
 
 // Handle multiple selections
 for (var i = 0; i<items.length; i++) {
-  var titleFieldID = Zotero.ItemFields.getID('title');
   var newTitle = Zotero.Utilities.capitalize(items[i].getField(titleFieldID, false, true).toLowerCase())
-
   items[i].setField(titleFieldID, newTitle);
   await items[i].saveTx();
 }
