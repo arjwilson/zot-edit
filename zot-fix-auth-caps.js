@@ -1,8 +1,7 @@
 /* RECAPITALIZE CREATORS OF SELECTED ZOTERO ITEMS
  * Runs from developer console in Zotero 5 Standalone
  *
- * Some depositories annoyingly provide all-caps metadata to the Zotero 
- * Connector, which Zotero doesn't catch. 
+ * Quick fix for instances where all-caps creator metadata is not caught by Zotero.
  *
  */
 
